@@ -1,0 +1,24 @@
+{
+  "name": "markup-2018q3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "node-sass scss/ -o style/",
+    "compile-watch": "npm run compile-sass && node-sass ./scss/style.scss -wo style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olgaluk/markup-2018q3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olgaluk/markup-2018q3/issues"
+  },
+  "homepage": "https://github.com/olgaluk/markup-2018q3#readme",
+  "dependencies": {
+    "node-sass": "^4.9.4"
+  }
+}
