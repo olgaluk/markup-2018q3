@@ -97,8 +97,8 @@ $trs: all .2s ease .1s;
 	padding: 0;
 }
 
-body {
-	width: 1600px;
+body {	
+	max-width: 1600px;		
 	text-align: center;
 	background-color: $white;
 	font-size: 16px;
@@ -357,10 +357,7 @@ li {
 		width: 886px;
 		height: 50px;
 		border: 1px solid $color-domainTable;
-		text-align: left;		
-		display: -moz-flex;
-		display: -ms-flex;		
-		display: flex;		
+		text-align: left;					
 		margin-bottom: 40px;
 		display: inline-block;
 
@@ -492,7 +489,7 @@ li {
 	display: -moz-flex;
 	display: -ms-flex;	
 	display: flex;
-	justify-content: center;
+	justify-content: center;	
 
 	&-cards {
 		width: 1200px;
@@ -501,37 +498,72 @@ li {
 		display: -moz-flex;
 		display: -ms-flex;		
 		justify-content: space-between;
-		align-items: center;
+		align-items: center;		
 
 		.package {
 			width: 255px;
 			border-top: 5px solid $pack-yellow;
 			background-color: $white;
-			padding: 35px 0;
-			margin-top: 10px;
-			box-shadow: 0 0 10px rgba(black, .06);
-			transition: all .5s ease;
+			padding: 19px 0;			
+			transition: .7s;
+			box-shadow: 1px 1px 3px 0 lightgray;
 
 			&-icon {
-				.fa {
-					font-family: "FontAwesome";
+				display: flex;
+      			align-items: center;
+    			justify-content: center;
+				width: 48px;
+				height: 48px;
+				border-radius: 100%;
+    			border: 7px solid $white;
+    			border-top-color: $pack-yellow;     			
+				transform: rotate(45deg);
+				margin: 10px 100px;
+					
+				i {
 					color: $pack-yellow;
-					border-top: 5px solid $pack-yellow;
-					border-radius: 50%;
-					padding: 15px;
-				}
+					transform: rotate(-45deg);	
+					font-size: 1em;
+				}								
+			}
+
+			.icon2 {
+				border: 7px solid $white;
+				border-top-color: $pack-gray;
+				border-right-color: $pack-gray;
+
+				i {
+					color: $pack-gray;
+				}				
+			}
+
+			.icon3 {
+				border: 7px solid $pack-red;
+				border-left-color: $white;
+
+				i {
+					color: $pack-red;
+				}				
+			}
+
+			.icon4 {
+				border: 7px solid $pack-green;				
+
+				i {
+					color: $pack-green;
+				}				
 			}
 
 			&-name {
 				text-transform: uppercase;
-				margin: 25px 0 15px;
+				margin: 15px 0 15px;
 			}
 
 			&-list {
 				border-top: 1px solid #b4b4b4;
 				border-bottom: 1px solid #b4b4b4;
 				margin: 0 28px;
-				padding: 15px 0;
+				padding: 10px 0;
 
 				li {
 					font-family: "Lato-Light", sans-serif;
@@ -544,11 +576,20 @@ li {
 						font-family: "Lato-Semibold", sans-serif;
 						float: right;
 					}
-				}
 
-				li:last-child {
-					padding: 0;
+					.number1 {
+						color: $pack-gray;
+					}
+
+					.number2 {
+						color: $pack-red;
+					}
+
+					.number3 {
+						color: $pack-green;
+					}
 				}
+				
 			}
 
 			p.package-cost {
@@ -718,7 +759,7 @@ li {
 	justify-content: center;
 
 	.about {
-		width: 1200px;
+		max-width: 1200px;
 		padding: 100px 0;
 		color: #747474;
 		background-image: url(../img/about/about-top-border.png);		
@@ -860,7 +901,7 @@ li {
 	height: 349px;    	
 	display: flex;
     justify-content: space-between;
-    margin: 0 201px;
+	margin: 0 201px;	
 }
 
 .service {
@@ -1031,16 +1072,12 @@ li {
 						}
 
 						a {
-							display: inline-block;
-
-							&:hover {
-								transform: translateX(10px);
-							}
+							display: inline-block;							
 						}
 					}
 				}
 
-				&_first-ul {
+				&__list {
 					padding-left: 45px;	
 				}
 			}
